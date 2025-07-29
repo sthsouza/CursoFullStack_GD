@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+
+    <!-- um formulário é representado pla tag form,
+     o input tem um atributo main que indica qual o nome do campo q será ligado ao servidor 
+     
+     value: predefinimos o valor
+     placeholder: o que deve ser preenchido
+     required: deve ser preenchido
+     
+     label -- trabalha junto com a input, tem o atributo for, igual o atributo id para vincular 
+     -->
+     <h1>Formulários de exemplo</h1>
+    <form action="/submit" method="post" enctype="application/x-www-form-urlencoded">
+     <h3>Input text</h3>
+     <label for="nome">Nome:</label>
+     <input type="text" name="nome" placeholder="Digite seu nome: " required><br><br><hr>
+
+     <h3>Input email</h3>
+     <label for="email">Email:</label>
+     <input type="email" name="email" placeholder="Digite seu email: " required><br><br><hr>
+
+      <h3>Input number</h3>
+     <label for="idade">Idade:</label>
+     <input type="number" name="idade" id="idade" step="10" min="1" max="80" required><br><br><hr>
+
+     <h3>Input password</h3>
+     <label for="senha">Senha: </label>
+     <input type="password" id="senha" name="senha" placeholder="Digite sua senha: " required> <br><br><hr>
+
+     <h3>Input checkbox</h3>
+     <label for="aceitar">Aceito os termos: </label>
+     <input type="checkbox" id="aceitar" name="aceitar" value="sim"> <br><br><hr>
+
+      <h3>Input Radio</h3>
+        <label>Gênero:</label>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="genero" value="feminino" required>
+        <label for="feminino">Feminino</label><br><br><hr>
+
+        <h3>Input file</h3>
+        <label for="arquivo">Envie seu arquivo:</label>
+        <input type="file" id="arquivo" name="arquivo" required><br><br><hr>
+
+        <h3>Input Hiden</h3>
+        <input type="hidden" name="token" value="123456"><br>
+
+        <h3>Input date</h3>
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" required><br><br><hr>
+
+        <h3>Input color</h3>
+        <label for="cor">Escolha uma cor favorita:</label>
+        <input type="color" id="cor" name="cor" value="#000000"><br><br><hr>
+
+        <h3>Textarea</h3>
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" name="comentario" rows="4" cols="5" placeholder="Digite seu comentário"></textarea><br><br><hr>
+
+        <h3>Select</h3>
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" required>
+            <option value="">Selecione...</option>
+            <option value="brasil" selected>Brasil</option>
+            <option value="eua">Estados Unidos</option>
+            <option value="portugal">Portugal</option>
+        </select><br><br><hr>
+
+        <h3>readonly</h3>
+        <label for="codigo">Código (somente leitura):</label>
+        <input type="text" id="codigo" name="codigo" value="12345" readonly><br><br><hr>
+
+        <h3>Input disabled</h3>
+        <label for="desabilitado">Campo desabilitado:</label>
+        <input type="text" id="desabilitado" name="desabilitado" value="Desabilitado" disabled><br><br><hr>
+
+        <h3>Input Submit</h3>
+        <input type="submit" value="Enviar"><br><br><hr>
+
+        <h3>Input buttom</h3>
+        <button type="button" onclick="alert('Botão clicado!')">Clique aqui</button><hr>
+
+
+
+    </form>
+
+    <!-- o input permite que o usuário consigo s comunicar com o servidor, a página opera como intermediadora. um exemplo disso e o google, possui um botão de inserir texto e outro de enviar, possibilitando assim conexão com o servidor
+    o buttom aceita coloacr imagens no botão, enquanto o input não -->
+    
+</body>
+</html>
