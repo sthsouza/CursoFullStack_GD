@@ -1,0 +1,17 @@
+
+/* As cores aceitam 3 tipos de informações:
+--------------nomeadas (blue, gray)
+--------------hexadecimais (#000)
+--------------RGB */
+
+body {
+    background-color: darkred;
+}
+
+h1 {
+    color: #fffebf;
+}
+
+p {
+    color: rgb(221, 232, 191);
+}
