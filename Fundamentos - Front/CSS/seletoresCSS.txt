@@ -1,0 +1,67 @@
+Tipos de seletores CSS
+-----------------------
+
+--Seletor de id 
+    seleciona o elemento que possui um id em especifico ID=identificador unico
+
+    #nome-do-id {
+        color : orange;
+    }
+
+--Seletor de classe
+    Seleciona uma classe em especifico
+
+    .nome-da-classe {
+        font-wight : bold;
+    }
+
+-- seletor de tag
+    Seletor d tag seleciona todas as tags especificadas do documento
+
+    p {
+        color: gray;
+    }
+
+--seletor de lista
+    quando vários seletores compartilham as mesmas declarações  de estilo, eles podem ser agrupados em uma lista separada por virgula
+
+    span,
+
+    div {
+        border: red 2px solid;
+    }
+
+-- seletor descendente
+    Aplica estilos a elementos que estão alinhados dentro de outros elementos
+    pai filho {
+        Estilos para o elemento filho
+    }
+
+    div span {
+        color: blue;
+    }
+
+--seletor filho
+    seleciona uma tag que está diretamento dentro de outra, se tiver uma profundidade maior nn é aplicado
+
+    pai > filho {
+        padding: 10x;
+    }
+
+--seletor adjacente diretamento
+    Seleciona um eleemnto que é imediatamente precedido por um outro elemento
+
+    elemento 1 + elemento 2 {
+
+    }
+
+    h1 + p {
+        color: blue;
+    }
+
+--seletor de irmãos gerais
+    seleciona todos os elementos que são irmãos diretos de um elemento especifico (que estão no mesmo nivel)
+
+    img ~p {
+        color : red;
+    }
