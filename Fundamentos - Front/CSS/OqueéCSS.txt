@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>o que é css</title>
+</head>
+<body>
+    <!-- o que é???
+--estilização
+Cascading style sheets
+determina regras para um documnto html
+
+seletor -- existem vários, indica qu os lmntos descritos  serão aplicados a regra indicada 
+
+propiedades -- caracteristicas que podem ser personalizadas (cor, px)
+
+valor -- cada propiedade tem o seu valor, dizemos que é uma declaração que possui uma propidade e um valor, e junto com o seletor dizemos que é uma regra css
+
+CSS IN LINE ------
+quando no própio HTML colocamos o atributo style
+    vantagem: prioridade, não tem efito cascata
+    desvantagem: não mantem o mesmo design em outros itens
+
+CSS INTERNO ---------
+Quando colocamos o css com a tag style dentro da tag head, no própio documento HTML. css embutido, o arquivo é auto-suficiente
+
+CSS EXTERNNO ---------
+um outro arquivo que conté apenas o css, todo o arquivo css fica em uma página
+    vantagem: sparação de conteúdo, reutilização, posso colocar a mesma estilização em várias páginas, aumenta a produtividade, oferece mais produtividade
+    desvantagem: nenhumaaaaa
+
+ORDEM DE PROCEDÊNCIA:----------
+css inline>css interno> css externo -->
+
+
+</body>
+</html>
