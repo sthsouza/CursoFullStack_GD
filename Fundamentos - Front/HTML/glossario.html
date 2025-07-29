@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas, FavIcon, Links e Listas!!</title>
+</head>
+<body>
+    <h1>Listas, FavIcon, Links e Listas!!</h1>
+    <!--
+    -----------ESTRUTURA PARA INSERIR IMAGEM-------
+        <img> --- tag para colocar a imgame ("nomeImagem.png")
+        src="" ---onde  aimgaem está
+        alt="" --- texto alternativo para acessibilidade ("Gato digitando")
+        style="" -- indica o tamanho da imagem ("width:48px; height:48px;"") evitar usar o style direto
+    ---------------------------------------------------
+    ----------PNG, JPGEG-----------------------------
+    -->
+    <!-------------------G L O S S Á R I O ------------------------
+    ELEMENTO HTML: Definido pela tag inicial
+        <br>, <p>
+    --------------------------------------------
+    ATRIBUTO HTML: Vai dentro do elemento, atribuindo caracateristicas a mais ao elemento
+        style="", href=""
+    -----------------------------------------------
+    URL ABSOLUTA: Links para uma imagem de outro site
+    ----------------------------------------------
+    URL RELATIVA: Imagem hospedada no site (nn precisa de nome de dominio)
+    ----------------------------------------------
+    HEADINGS: Cabrçalho do site
+        h1, h2....h6
+    ----------------------------------------------
+    ATRIBUTO STYLE: Adiciona estilos ao elemento
+        Cor, fonte, tamanho
+    ----------------------------------------------
+    HTML SEMANTICO: Elementos semanticos descrevem o significado tanto para o leitor tanto quanto para o desenvolvedor
+    ----------------------------------------------
+    TAG <a>: define um hiperlink. um link nn prrecisa ser só texto
+            Possui várias propiedades
+    ----------------------------------------------
+    TAG <abbr>: Define abreviaçẽos ou acrônimos
+        ex:CSS, HTML, ASAP, ATM, Mr., Dr.
+    ----------------------------------------------
+    <head>: Onde ficam os metadados
+    ----------------------------------------------
+    <style>: Elemento utilizado para inseriri estilizações no body
+    ----------------------------------------------
+    <link> conecta o documento atual a recursos externos
+        pode vinculr folhas de estilos externas
+    ----------------------------------------------
+    <script>: O elemento <script> é usado para definir JavaScript do
+    lado do cliente
+    ----------------------------------------------
+    <base> mostra a url base para todas as outras url da página, deve ter ou um atributo hrf ou target, ou os dois
+        Só pode haver umunico elemnto base em todo o documento
+    ----------------------------------------------
+    <blockquote>: Seção que é citada de outra fonte
+            os navegadores recuam esse tipo de elemento
+    ----------------------------------------------
+    <q>: Define uma citação curta
+            navegadores inserem aspas
+    ----------------------------------------------
+    <address>:Informações de contato do autor da página
+        email, endereço fisico, numero de telefone, redes sociais..
+        Possui uma quebra de linha antes e depois e é renderizado em itálico
+    ----------------------------------------------
+    <cite> Título de um trabalho criativo
+            poema, musica, filme, escultura, pintura...
+    ----------------------------------------------
+    <bdo>: substitui a direção do texto atual
+    ----------------------------------------------
+    Atributo hrf: indica o destino do link
+        é o mai simportante do elemento <a>
+    ---------------------------------------------
+    atributo target: onde vai abirir o documento vunculado
+            _self:Abre o link na mesma janela
+            _blank: Abre odocumento em uma outra janela
+            _parent_Abre o documento no quadropai
+            _Top: Abre em todo o corpo da janela
+    ----------------------------------------------
+    atibuto title: Mostra o titulo do elemento
+            Aparece quando o mouse passa por cima
+    ----------------------------------------------
+    mailto: Esquema em que dentro do atributo hrf cria umlink que abre o prpgrama de email do usuário
+    ----------------------------------------------
+    <img>:  incorpora uma imagem da web
+            atributos:
+            src - especifica o camiho para a imagem
+            alt - especifica um texto alternativo para a imagem
+    ----------------------------------------------
+    atributo src: define o caminho (URL) para a imagem
+            a imagem preisa ser encontrada pelo navegador, caso contrário irá aparecer um icone de link quebrado
+    ----------------------------------------------
+    atributo alt: Texto alternativo pra uma imagem caso não puder visualizá-la
+    ----------------------------------------------
+    atributos width e weight: Definem a largura e altura das imagens, respectivamente.
+            funcionam em pixels
+    ----------------------------------------------
+    Favicon no html: Imagem exibida ao lado do titulo da página na guia doo navegador
+            ico, png, gif, jpg, svg
+    ----------------------------------------------
+    TABELAS: organiza dados em linhas e colunas
+            <td>: Table data, pode contertodo o tipo de elementos html
+            <tr>: Cada linha da tabela começa com um <tr> e termina com </tr> significa table rows
+            <th>: quando queremos que as célulsa sejam cabeçalhos
+            atributo colspan: uma célula se estende por várias colunas
+            atributo rowspan: Uma céula se estente por várias linhas
+            <colgroup> elemento usado para estilizar várias colunas especificas de uma tabela
+                cada grupo do <colgroup> é especificado por <col>
+                O atributo span indica quanats colunas obtém o estio e o atributo style especifica o estilo a ser fornecido às colunas
+    ----------------------------------------------
+    LISTAS: Organiza informações
+        <ul>Unordered list -lista não ordenada
+        <ol> ordered list - lista ordenada - numérica ou alfabética
+            <li>  list item - defineos itens da lista
+            é usada apenas dentro de listas ordenadas, não ordenadas e listas de menu
+        <dl>descritive list - lista descritiva
+                é usada em conjunto com a tag <dt> e <dd>
+            <dt> descritive title - nome de uma lista de descrição
+            <dd> descreve o <dt> é um parágrafo de texto que pode conter imagens, quebars de linha, imagens, links, listas
+    ----------------------------------------------
+    <area> deifne uma area dentro de um mapa de imagem, um mapa de imagem é umaimagem com áreas clicáveis. são sempre ainhados dentro de uma tag <map>
+    ----------------------------------------------
+    <article> specifica conteúdo independente
+    e autocontido. Um artigo deve fazer sentido por si só, e deve ser
+    possível distribuí-lo independentemente do resto do site.
+        pod ser usado em postagens do fórum, blogs, comentários do usuário, cartões de produtos, artigos de joral
+    ----------------------------------------------
+    <aside> fica aolado do conteudo central, deve ser relacionado
+        normalmente eçolocado como uma barra lateral 
+    ----------------------------------------------
+    <section>
+        define uma seção - agrupamento temático de conteúdo
+            pode ser usada em capitulos, introduções, novos itens, informações de ocntato
+        uma página da web normalmente pode ser dividida em seções
+        para introdução, conteúdo e informações de contato.
+    ----------------------------------------------
+    <header> conteieener para um conjunto de liinks de navegação
+            normalmente contém: um ou mais elementos de titullo, logotipo ou icone, informações de autoria
+    ----------------------------------------------
+    <footer> Rodapé para um documento ou seção
+            Normalmente contém informações de autoria, direitos autorais, informações de contato, mapa do site, voltar ao topo liks e documentos relacionados
+        É possivel ter vários documentos footer em um documento
+    ----------------------------------------------
+    <nav> bloco de conjunto de links de navegação, destina-se apenas a aoo bloco principal de links de navegação
+    ----------------------------------------------
+    <figure> especifica contedo independente, como ilustrações diagramas, fotos, listagens de código
+    ---------------------------------------------
+    <figcaption> define uma legenda para um elemento <figure>
+            pode ser colocado como primeiro ou o ultimo filho de um elemento <figure> junto o elemento img
+    ----------------------------------------------
+    <details>: indica um widget qe o usuário pode abrir e fechar, qunado exibido ele espande e exibe seu conteudo
+            pode conter qualquer tipo de conteudo
+            a tag summary é usada em conjunto com a detils paraespecificar um cabeçalho visivel para os detalhes
+    ----------------------------------------------
+    <main> esecifica o conteudo principal de um documento, o conteudo dentro do main deve ser exclusivo do documento, não deve conter nenhum contedo repetido em documentos como barras laterais, links de navegação, informações de direitos autorias, logotipos de sites  e formulários de pesquisas.
+            não deve haver mais de um documento main no documento
+    ----------------------------------------------
+    <time> define um horário especifico.o atributo date time desse elemento é usado para traduzir a hora em um formato legivel por máquina para que os avegadores
+    possam oferecer a adição de lembretes de data por meio do
+    calendário do usuário e os mecanismos de pesquisa possam
+    produzir resultados de pesquisa mais inteligentes
+            
+
+
+        
+        
+
+
+    ------------------------------------------------>
+    
+</body>
+</html>

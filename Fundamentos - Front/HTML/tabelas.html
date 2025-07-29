@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<style>
+    table, th, td {
+        border: 1px solid red;
+    }
+</style>
+<body>
+    <!--T A B E L A S
+    Titulo - <th> - table header
+    Linha - <tr>
+    Coluna - <td>
+        -->
+
+    <table>
+        <head>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Profissão</th>
+            </tr>
+        </head>
+        <tbody>
+            <tr>
+                <td>Stheffany</td>
+                <td>15 Anos</td>
+                <td>Estudante da Grow</td>
+            </tr>
+            <tr>
+                <td>Marcos</td>
+                <td>23 Anos</td>
+                <td>Engenheiro Civil</td>
+            </tr>
+            <tr>
+                <td>Anthonio</td>
+                <td>73 Anos</td>
+                <td>Historiador</td>
+            </tr>
+            <tr>
+                <td>Maria Sônia</td>
+                <td>45 Anos</td>
+                <td>Professora</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            Rodapé da tabela
+        </tfoot>
+    </table>
+    <h1>tabela com width e heght diferentes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th style="width: 200px; height: 50px;">Profissão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria</td>
+                <td style="height: 100px;">Engnheira de SOftware</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>tabela com colspan e rowspan</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th colspan="2">Função</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Ana</td>
+                <td>Carpinteiro</td>
+                <td>Madrereira</td>
+            </tr>
+            <tr>
+                <td colspan="2">Madeira</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Semântico</title>
+</head>
+<body>
+    <!--Utilização correta do html
+    beneficios: acessibiliade, facilita leituras de páginaspor buscas web, manutençãocom facilidade, browser modernos consegue entender melhor
+    
+    <header> - cabeçalho
+    <nav> - (menu navegação)seção na pate esquerda do site
+    <main> - pate central do site
+            <article> conteudo por si só
+            <sections> um artigo com várias seções>
+    <aside> - lado direito do site
+    <footer> - rodapé ad página
+    -->
+
+    <!--Cabecalho da página-->
+    <header>
+        <h1>Blog de tecnologia</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#artigo">Artigo</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Seção principal com um artigo-->
+    <main>
+        <section id="artigo">
+            <article>
+                <header>
+                    <h2>Os benefícios </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis saepe nam corrupti numquam dolorum beatae repudiandae quas sit. Nobis est praesentium, consectetur totam voluptatibus odit similique? Eligendi vel rem quisquam?
+                    </p>
+                    <p>
+                        Publicado em <time datetime="2025-07-28"></time>
+                    </p>
+                </header>
+            </article>
+        </section>
+    </main>
+
+    <!--Seção sobre-->
+    <aside id="sobre">
+        <h2>Sobre nós</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus delectus incidunt quisquam rerum maiores harum quaerat aut minima unde, aperiam dolores vitae nesciunt, dolorem voluptatum optio, temporibus velit assumenda?
+        </p>
+    </aside>
+
+    <!--Rodapé com informações de contato-->
+    <footer>
+        <section id="contato">
+            <h2>Fale conosco</h2>
+            <address>
+                Email: <a href="mailto:stheffanyxz@gmail.com">stheffanyxz@gmail.com</a>
+                Celular: <a href="tel:+5551985432303"></a>
+            </address>
+        </section>
+    </footer>
+</body>
+</html>
