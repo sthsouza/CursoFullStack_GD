@@ -1,0 +1,26 @@
+ body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .titulo-secao {
+            font-size: 24px;
+            background-color: rgb(340, 230, 82);
+        }
+
+        #texto-copy {
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+        }
+
+        section.formacao > p {
+            text-transform: uppercase;
+        }
+
+        section.experiencias > p.descricao {
+            color: rgb(95, 0, 90);
+        }
+
+        section.contato a {
+            text-decoration: none;
+        }
