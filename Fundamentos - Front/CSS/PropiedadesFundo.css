@@ -1,0 +1,11 @@
+body {
+    background-image: url(./img/pexels-pixabay-462162.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-blend-mode:color-dodge;
+    background-size:cover;
+}
+
+/*body {
+    background: url(./img/pexels-bri-schneiter-28802-346529.jpg)no-repeat center);
+}*/
