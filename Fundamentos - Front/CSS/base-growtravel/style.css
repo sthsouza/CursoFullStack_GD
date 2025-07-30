@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: Montserrat;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #4064b4;
+    padding: 15px;
+}
+
+header > p {
+    display: inline;
+    text-transform: uppercase;
+    margin: 14px;
+    color:  white;
+    font-weight: bold;
+}
+
+section {
+    text-align: center;
+    padding: 48px;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 10px;
+}
+
+#texto {
+    text-align: justify;
+}
+
+img {
+    width: 400px;
+}
+
+button {
+
+    border-radius: 50px;
+    border-style: none;
+    padding: 20px 50px;
+    background-color: #4064b4;
+    color: white;
+    margin: 20px;
+    font-size: 15px;
+
+}
+
+hr {
+    border: 1px solid lightgray;
+}
+
+footer {
+    text-align: center;
+    color: gray;
+    font-size: small;
+    margin: 30px;
+}
+
