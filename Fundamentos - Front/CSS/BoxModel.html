@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        div {
+            height: 75px;
+            width: 150px;
+            background-color: darkred;
+            color: beige;
+            text-align: center;
+
+            /*
+            A propiedade margin é usada pra dar um espaço entre o elemento e os outros elementos adjacentes
+             margin-top: 20;
+             margin-bottom: 10;
+             margin-right: 30;
+             margin-left: 5;
+             
+             margin: 5px, 10px; left/right --bottom/top
+             */
+
+             margin: 20px 30px 10px 5px;
+
+             /*
+                A propiedade padding é usada pra dar um espaço entre a parte cetral e as bordas do elemento
+                padding-top: 20;
+                padding-bottom: 10;
+                padding-right: 30;
+                padding-left: 5;
+             
+                padding: 5px, 10px; left/right --bottom/top
+            */
+
+             padding: 20px 20px 5px 10px;
+
+            
+            /*
+                O border cria uma borinha ao redor do elemento
+                border-width: 15px;
+                border-color: brown;
+                border-style: groove;
+            */
+
+            border: 15px groove brown ;
+
+            /*
+                Temos tbm o outline, porém quando tentamos ver o boxmodel em ferramentas como a inspecionar do google, não aparece -- simplesmente nn é considerada, ao contrário do border (Fora isso, faz praticamente a mesma coisa)
+            */
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+    
+    Cada elemento no html é renderizado como um componente retangular com largura e altura contendo propiedades, o boxmodel é um coponente que define padrões nas páginas.
+    ---------------Para definir esse spadrões há 4 propriedades: Cada retangulo precisa ter uma margem, uma borda e um padding---------------------------------
+    -->
+
+    <div>
+        Oiêê!! Eu sou uma div super estilosa.
+    </div>
+
+    <div>
+        Oiêê!! Eu sou uma div super estilosa.
+    </div>
+    
+</body>
+</html>
