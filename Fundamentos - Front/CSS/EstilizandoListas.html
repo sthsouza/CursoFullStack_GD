@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizando Listas</title>
+
+    <style>
+        /* Estilização para listas não ordenadas (ul) */
+        ul.custom-ul {
+            list-style-type: circle;     /* Define o tipo de marcador */
+            list-style-position: inside; /* O marcador aparece dentro da lista */
+            margin: 20px;                /* Margem externa da lista */
+            padding: 10px;               /* Espaçamento interno da lista */
+            background-color: #f9f9f9; /* Fundo claro para destacar a lista */
+            border: 1px solid #ccc;    /* Borda ao redor da lista */
+        }
+
+        /* Estilização para listas ordenadas (ol) */
+        ol.custom-ol {
+            list-style-type: lower-latin; /* Numerado com decimais */
+            list-style-position: outside; /* O número aparece fora da lista */
+            margin: 20px;                 /* Margem externa da lista */
+            padding: 10px 20px;           /* Espaçamento interno da lista */
+            background-color: #e9f7ef;  /* Fundo esverdeado claro */
+            border: 1px solid #28a745;  /* Borda verde */
+        }
+
+        /* Estilização para listas de descrição (dl) */
+        dl.custom-dl {
+            margin: 20px;
+            padding: 10px;
+            background-color: #f1f8ff;
+            border-left: 4px solid #007bff; /* Borda lateral esquerda */
+        }
+
+        /* Estilização para os termos (dt) das listas de descrição */
+        dl.custom-dl dt {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Estilização para as descrições (dd) das listas de descrição */
+        dl.custom-dl dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Lista não ordenada (ul)</h2>
+    <ul class="custom-ul">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <h2>Lista ordenada (ol)</h2>
+    <ol class="custom-ol">
+        <li>Primeiro</li>
+        <li>Segundo</li>
+        <li>Terceiro</li>
+    </ol>
+
+    <h2>Lista de descrição (dl)</h2>
+    <dl class="custom-dl">
+        <dt>HTML</dt>
+        <dd>Uma linguagem de marcação usada para criar páginas web.</dd>
+
+        <dt>CSS</dt>
+        <dd>Uma linguagem de estilos usada para definir a aparência das páginas web.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>Uma linguagem de programação usada para criar interatividade nas páginas web.</dd>
+    </dl>
+
+</body>
+</html>
