@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <link rel="stylesheet" href="note.css">
+    <style>
+        button{
+            background-color: green
+        }
+        button:hover {
+            background-color: red;
+        }
+        input{
+            background-color: green;
+        }
+        input:disabled {
+            background-color: red;
+        }
+
+         input[type="checkbox"]:checked {
+            outline: 10px solid green;
+            margin: 15px;
+        }
+        input:focus {
+        border: 10px solid blue;
+        margin: 15px;
+        }
+
+        a {
+            color: red;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        ul li:first-child {
+            font-weight: bold;
+            color: darkred;
+        }
+
+        ul li:nth-child(3) {
+            color: darkblue;
+        }
+
+        .ex2 {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .ex2::before {
+            content: "\2714"; /* Código Unicode para um checkmark */
+            margin-right: 5px;
+        }
+
+        #letter::first-letter {
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        #firstl::first-line {
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pseudo-classes</h1>
+        <p>Pseudo classes adicionam estiizações nos comportamnetos dos elementos, indentificando estados do elemento. <b>O elemento pode representar diferentes estilos dependendo de seus estados.</b></p>
+    </header>
+    <section>
+        <h2>Hover</h2>
+        <p>Serve para <b>mudar a cor</b> do elemnto quando o mouse passa por cima.</p>
+        <div class="code">
+            div {<br>
+                color: green;<br>
+            }<br>
+         <br>
+        div hover {<br>
+            color: red;<br>
+        }
+        </div>
+        <p> No exemplo acima, a div está na cor verde mas quando o mouse ppassar por cima ela ficará na cr verde.</p>
+        <button>
+            exemplo
+        </button>
+
+        <section>
+            <h2>Disabled</h2>
+            <p>Elementos quando estão desabilitados</p>
+              <input type="text" placeholder="Ativo">
+              <input type="text" placeholder="Desabilitado" disabled>
+       </section>
+       <section>
+        <h2>Checked</h2>
+        <p>checkboxes ou radio buttons quando selecionados;</p>
+        <label><input type="checkbox">Exemplo de checked</label>
+       </section>
+       <section>
+        <h2>focus</h2>
+        <p>Quando um lemento recebe foco</p>
+        <label><input type="text" placeholder="Exemplo de focus">Clique para ver a boda</label>
+       </section>
+       <section>
+        <h2>:visited</h2>
+        <p>Link já visitado</p>
+        <a href="https://www.growdev.com.br"_blank">Thats not Google</a>
+       </section>
+       <section>
+        <h2>:first-child e :nth-child</h2>
+        <ul>
+         <li>Primeiro item (estilizado com :first-child)</li>
+         <li>Segundo item</li>
+         <li>Terceiro item (estilizado com :nth-child(3))</li>
+         <li>Quarto item</li>
+         </ul>
+       </section>
+       <section>
+        <h1>Pseudo-elementos</h1>
+        <p>
+            Os pseudo elementos permitem estilizar elementos já existemtes sem a necssidade de criar novos elemntos html. <b> São como irmãos gemeos de um elemento</b>, é possivel adcionar pseudo elementos antes e depois de um elemento.
+        </p>
+        <h2>Motivos</h2>
+            <dl>
+            <dt>Criar elementos decorativos:</dt>
+            <dd>Adicionar linhas, ícones ou outros
+            elementos visuais sem criar elementos HTML extras.</dd>
+            <dt>Simular elementos HTML:</dt>
+            <dd>Criar elementos como botões com
+            pseudo-elementos, reduzindo o HTML.</dd>
+            <dt>Melhorar a semântica:</dt>
+            <dd>Manter o HTML mais limpo e semântico,
+            evitando a criação de elementos div vazios para fins de
+            estilização.</dd>
+            <dt>Criar layouts mais complexos:</dt>
+            <dd>Combinados com outras
+            propriedades CSS, podem ser usados para criar layouts mais
+            sofisticados.</dd>
+        </dl>
+       </section>
+       <section>
+        <h2>Sintaxe</h2>
+        <p>A sintaxe é formada por <b>::nome</b> junto ao nome do elemento alvo. Por xemplo, para criar um botão com check box seria assim:</p>
+        <div class="code">
+            .button { <br>
+                display: inline-block;<br>
+                padding: 10px 20px;<br>
+                background-color: #000<br>
+                color: white;<br>
+                txt-decoration:none;<br>
+                border-radius: 4px;<br>
+            }<br>
+            .button::before {<br>
+                content: "\2714"; /* Código Unicode para <br>um checkmark */<br>
+                margin-right: 5px;<br>
+            }<br>
+        </div>
+        <button class="ex2">Exemplo super legal</button>
+       </section>
+       <section>
+        <h2>Outros exemplos</h2>
+        <dl>
+            <dt>::before</dt>
+            <dd>Insere o conteúd antes do lemento, tipo um emoji antes de um texto em um botão.</dd>
+            <dt>::after</dt>
+            <dd>Mesma coisa que o before, só que depois da frase do botão</dd>
+            <dt>::first-letter</dt>
+            <dd>Permite estilizar a primeira letra de um elemento, como um parágrafo. Ideal para criar capitulares estilizadas;</dd>
+            <dt>::first-line</dt>
+            <dd>Permite estilizar a primeira linha de um elemento, como um parágrafo. Ótimo para destacar a primeira linha de um texto;</dd>
+            <dt>::selection</dt>
+            <dd>Permite estilizar o texto selecionado pelo usuário;</dd>
+            <dt>::marker</dt>
+            <dd>permit sstilizar os marcadores de listas</dd>
+        </dl>
+        <hr>
+        <p id="letter">Exemplo de first letter</p>
+        <p>Exemplo de ::selection (selecione o texto com o cursor)</p>
+        <p id="firstl">esse é um exemplo de extilização na primeira linha do texto, a seguir, irei escrever e digitar algmas coisas aleatórias: akkkkkkkkkkkkkkakakakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk<br>kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkaaaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaakkakkakakakakakakakka<br>kaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakkkkkkkkkkkkkkkkkkkkkkkkkkkkk</p>
+       </section>
+
+    
+</body>
+</html>
