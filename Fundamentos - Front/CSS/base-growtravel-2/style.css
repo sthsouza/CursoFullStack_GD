@@ -25,6 +25,14 @@ nav.menu li > a {
     font-weight: bold;
 }
 
+nav.menu li > a:hover {
+    color: #4064b4;
+    background-color: white;
+    text-decoration: underline;
+    border-radius: 30px;
+    padding: 10px;
+}
+
 
 img {
     width: 400px;
@@ -54,8 +62,16 @@ button {
     color: white;
     margin: 20px;
     font-size: 15px;
+    cursor: pointer;
 
 }
+
+button:hover {
+    font-weight: bold;
+}
+
+
+
 
 #quem-somos > p {
     text-align: justify;
@@ -85,4 +101,11 @@ footer {
     color: gray;
     font-size: small;
     margin: 30px;
+}
+
+#whats {
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    width: 60px;
 }
