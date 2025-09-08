@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="note.css">
+    <title>Positions</title>
+    <style>
+        .exemplo {
+            color: rgb(255, 255, 255);
+            background-color: #000000;
+            padding: 10px;
+            position: fixed;
+            left: 1px;
+            bottom: 19px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Positions</h1>
+    </header>
+    <main>
+        <section>
+            <p>
+                Refere-se ao posicionamento dos elementos em uma página html, a propridade position é usada para permitir que a posição dos elementos seja alterada.
+            </p>
+            <div class="code">
+                position: relative; <br>
+                position: absolute; <br>
+                position: sticky; <br>
+                position: fixed;
+            </div>
+        </section>
+        <section>
+            <h2>relative</h2>
+            <p>
+                Se baseia na posição <b>static</b>, é possivel usar as propiedades top, bottom, left e right. Indicam a distancia do lmnto apartitr da área definida. Caso nehuma propridade sej adefinida el terá o mesmo coportamento do static.
+            </p>
+
+            <div class="code">
+                    #square2 {
+                    position: relative;
+                    top: 20px;
+                    left 40px;
+                }
+            </div>
+        </section>
+        <section>
+            <h2>Absolute</h2>
+            <p>Permite que o elemento seja posicionado em qualquer lugar na tela, de <b>forma livre</b>, com as prpreidades <b>Top, bottom, left  right</b>. O posicionamento inicial do absolute baseia-se num primeir elemento que não seja static. ou seja, Se o absolute esteja dentro de uma div com position relative a positions dele vai ser a partir dessa div</p>
+            <div class="code">
+                 #square2 {
+                    position: absolute;
+                    top: 20px;
+                    left: 40px;
+                }
+            </div>
+            <p>
+                Um elemento absolute deixa de
+                ocupar seu espaço normal no documento e passa a flutuar com
+                uma posição mais livre. Seu espaço no documento é <b>liberado.</b>
+            </p>
+        </section>
+        <section>
+            <h2>Fixed</h2>
+            <p>
+                acompanha o mesmo funcionamento da posição absolute, tem as mesmas propriedades. A bdiferença é que a absoluet baseia se no <b>primeiro elemento antecessor não static</b> equanto o fixed se baseia <b>na tela em si</b>
+            </p>
+            <hr>
+            <p>
+                Ou seja, se a tela for movimentada, o elemento com position fixed <b>continuará na tela</b> enqunato o absolute terá seu elemento escondifo conforme a tela é movimntada.
+            </p>
+            <div  class="code">
+                #square2 {
+                    position: fixed;;
+                    top:20px;
+                    left: 60px;
+                }
+            </div>
+        </section>
+        <section>
+            <h2>sticky</h2>
+            <p>
+                Tm as mesmas caracteristcas do relative e fixed, é be dinamica. enquanto sua posição não estiver visivel na tela, <b>Sua posição será como um relative</b>, ou seja, vai acompanhar a locomoção do html. mas assim que  página for movida, ele <b>vai fazer que nem o fixed. </b>b>Só acompanha o movimento quanda a parte superior da tela passa sobre o elemento
+            </p>
+            <div class="code">
+               As configrações são as mesmas dos outros elementos. 
+
+            </div>
+        </section>
+        <section>
+            <h2>Precedência</h2>
+            <p>
+                Ordena os elementos por rdem de prioridades, é possivel usar as propiedades do z-index, quanto maior o z-index, maior a precedencia ssobre outros elemntos.
+            </p>
+            <div class="code">
+                #square1 {<br>
+                    position: relative;<br>
+                    z-index: 2;<br>
+                }
+                <br>
+                #square2{<br>
+                    position: fixed;<br>
+                    top: 20px;<br>
+                    left: 40px;<br>
+                    z-index:1;<br>
+                }
+            </div>
+        </section>
+        <section>
+            <h2>Overflow</h2>
+            <p>Quando o coneteudo de uma página ultrapassa o limite máximo de uma página ou um uma div. é possivel ter  o <b>visible, hidden, scroll e auto</b></p>
+            <div class="code">
+                #content {<br>
+                    overflow: visible;<br>
+                    overflow: hidden;<br>
+                    overflow: scroll;<br>
+                    overflow: auto;<br><br>
+
+                    (tbm podemos definir por eixo)<br>
+                    overflow-y: auto;<br>
+                    overflow-x: hidden;<br>
+                }
+            </div>
+            <p> O comportaneto padrão dos elementos é o overflow visible, em que o conteudo ainda é visivel quando ultrapassa a fronteira de seu bloco. </p>
+            <hr>
+            <p>
+                o <b>hidden</b> é usado para esconder o elemento, o <b>scroll</b> adicona uma barra de rolagem para qu eo user possa ver o resto do conteudo. o <b>auto</b> só adiciona o scroll quando t5em o overflow;
+            </p>
+        </section>
+        <section>
+            <h2>flutuação</h2>
+            <p>Elementos podem ser empurrados, seja pra esquerda ou direita. A propridade usada para esta função é  o float que recebe os valores <b>left, right ou none.</b></p>
+            <div class="code">
+                div {;<br>
+                    float: left;<br>
+                    float: right;<br>
+                    float: none;<br>
+                }<br>
+            </div>
+            <p>O float ajuda na organzação de elementos sem modificar a popridade display. Assim, elementos de bloco podem sr posicionados lado  a lado, de forma que <b>flutuem para o mesmo lado.</b></p>
+            <div class="code">
+                #square1 {<br>
+                    float: left;<br>
+                }<br>
+                #square2 {<br>
+                    float: left;<br>
+                }<br>
+            </div>
+            <p>No entanto, quando usmos o float, é como se estivessemos colocando os elementos para sobrepor os outros na página. elemento com float ficariam por cima de elementos com sm float.</p>
+        </section>
+        <section>
+            <h2>clear</h2>
+            <p>
+                Para os elemntos da propriedade float não sairem do fluxo da forma, existe a propriedade clear. <b>é usada noprimeiro elemento não float</b> após a algum que seja float (é para consderar o espaço na hora da redenrização) São classificado em:
+            </p>
+            <br>
+            <b>left e right:</b> <p>
+                o clear só vai considerar ementos com float left ou right, respectivaente
+            </p>
+            <b>both</b>
+            <p>
+                onsidera tanto o right quanto o left
+            </p>
+            <b>none</b>
+            <p>
+                comprtamento padrão e não aplica o clear para qualquer elemento float
+            </p>
+        </section>
+
+    </main>
+    <footer>
+        <p class="exemplo">
+            ex. fixed
+        </p>
+
+    </footer>
+</body>
+</html>
