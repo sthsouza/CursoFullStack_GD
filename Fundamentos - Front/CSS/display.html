@@ -4,18 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <title>Display</title>
+    <link rel="stylesheet" href="note.css">
+    <style>
+        #ex-inline-block {
+            display: inline-block;
+            color: white;
+            background-color: black;
+        }
+
+        #ex-inline-block2 {
+            display: inline-block;
+            color: white;
+            background-color: black;
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1></h1>
+        <h1>bloco e inline</h1>
     </header>
     <main>
         <section>
-            <h2></h2>
+            <h2>elementos de bloco</h2>
             <p>
-                
+                São as tags que ocupam todo o espaço horizontal disonivel, possibilitam definir alturas e larguras ersonalizadas. <b>O item sucessor de um elemento de bloco será mostrado em baixo do item.</b>
             </p>
+            <p style="color: white; background-color: black;">Exemplo de elemento de bloco com tag p</p>
+            <div class="code">
+                divs, sections, p, elementos de ttulo (h1 até h6) são elementos de blocos.
+            </div>
         </section>
+        <section>
+            <h2>Inline</h2>
+            <p>
+                Ao contário dos elementos de bloco, <b>ocupa apenas o espaço necessário para o elemento. Não ocupando um linha horzontal toda.</b> Vários elmentos inline podem ser renderizads juntos na página.<b>Não 'possivel altrar a altura e nem a largura</b>
+            </p>
+            <div class="code">
+                Os spans, a tag "a", tag "em", "strong", "img" representam elementos que são inline 
+            </div>
+            <span style="color: white; background-color: black;">Elemento inline com span</span>
+            <a href="#" style="color: white; background-color: black;">link inline com tag "a"</a>
+        </section>
+        <section>
+            <h1>Display</h1>
+            <p>
+                Permite que um elemento de bloco<b>se torne um elemento inline e um elemento inline se torne um elemento de bloco</b>
+            </p>
+            <hr>
+            <p>
+                A tag div recebe valor inicial de <b>block</b> e a tag img recbe o valor de inline, mas existem outras vaariações
+            </p>
+            <div class="code">
+                display: block;
+                display: inline;
+                display: inline-block;
+                display: flex;
+                display: grid;
+            </div>
+            <dl>
+                <dt>Block</dt>
+                <dd>
+                    Faz com que oelemento de torne bloco, ele ocupará um linha inteira para ser rendeerizado (100% da largura disponivel)
+                </dd>
+
+                <dt>inline</dt>
+                <dd>
+                    Faz com que qualuqer elemento se torne inline, ocuando aenas o espaço necessário para sua exbição. as propriedades hight e width não são processadas pela renderização.
+                </dd>
+
+                <dt>Inline block</dt>
+                <dd>
+                    Torna possivel colocar um elemento do lado do outro (inline) ao mesmo tempo que mantém a capacidade de definir o weight e height (display)
+                </dd>
+                <div id="ex-inline-block">Oi , sou exemplo de um inline-block sem tamanho</div>
+                <div id="ex-inline-block2">Oi , sou exemplo de um inline-block COM tamanho</div><br>
+
+                <dt>flex</dt>
+                <dd>
+                    é usado para a <b>disposição de elementos naas paginas</b>, Com o flex os lementos passam a estar em um container que abriga outros elementos (flex itens), a organizaçã dos itens pode ser em coluna sou linhas. é usado para a criaçõa de layouts responsivos
+                </dd>
+
+                <dt>Grid</dt>
+                <dd>
+                    asim como no flexbox, o grid também funciona como um container que te diversos ites. No entanto, trabalha d forma multidimnsional, no flex trabalhamos com colunas e linhas, mas no grid pdemos ter linhas  colunas Combinados. <b>O grid é mais para a constrçao de layouts, enquanto que o flex está mais para a disposição de elementos</b>
+
+                </dd>
+            </dl>
+        </section>
+        
     </main>
     
 </body>
