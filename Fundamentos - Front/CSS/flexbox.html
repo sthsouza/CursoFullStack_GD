@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="note.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>layout flexbox</h1>
+        <p>
+            Essencial para alinhar itens em um container, possui a capacidade de alterar  alargura ou a altura (e ordem),<b> flexivel e expande para preeencher  livre ou reduz para evitar o transbordamento.</b>
+        </p>
+    </header>
+    <main>
+        <section>
+            <h2>Conceitos básicos</h2>
+            <p>
+                alogumas propriedades devem ser definidas no container (elemento pai, conhecido como flex container) enquanto outros devem ser deifinidos nos filhos (os flex items).
+            </p>
+            <img src="img/prit1.png" >
+            <dl>
+                <dt>main axis</dt>
+                <dd>
+                    eixo principal de um container
+                </dd>
+
+                <dt>main-start | main-end</dt>
+                <dd>
+                    Começo e fim de onde os flex itens são colocados
+                </dd>
+
+                <dt>main size</dt>
+                <dd>
+                    O que estiver  na dimensão principal (largura ou altura) é o tamanho principal do item
+                </dd>
+
+                <dt>cross axis</dt>
+                <dd>
+                    eixo perpendicular ao eixo principal (é chamado de eixo cruzado) sua direção depende da direção do eixo do main axis. (eixo principal)
+                </dd>
+
+                <dt> cross-start | cross-end</dt>
+                <dd>
+                    basicamente o meso que o main start e cross end mas na vertical, cruzando.  as linhas flexiveis são prenchidas comitens e colocadas no conteiner, começando no lado da ponta cruzada do container flexivel e indo em direção ao lado da ponta cruzada.
+                </dd>
+
+                <dt>cross size</dt>
+                <dd>
+                    a larrgura ou altura de um item fflexivel, o que estja na dimensão cruzada, é o taanho cruzado do item.
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <h2>propriedades Flexbox</h2>
+            <p>
+                a seguir, a nomenclatura:
+            </p>
+            <dl>
+                <dt>1. container</dt>
+                <dd>elemento que contém outrops elemntos. 'considerado o elemento parent (pai)</dd>
+                <img src="img/container.png"><br>
+
+                <dt>2. children</dt>
+                <dd>
+                    são os itens internos dentro de um container, ou conforme a analogia dos próprios nomes, são filhos do elemento pai.
+                </dd>
+                <img src="img/items.png">
+            </dl>
+        </section>
+        <section>
+            <h2>Props. do Parent</h2>
+            <dl>
+                <dt>dislay</dt>
+                <dd>
+                    define um flex container, pode ser flex ou inline-fex, permitindo um conteúdo flexível para tods os seus filhos diretos.
+                </dd>
+                <div class="code">
+                    .container {
+                        display: flex;
+                    }
+                </div>
+
+                <dt>flex-direction</dt>
+                <dd>
+                    Estabelece o eixo principal, definindo a direção que os flex items são colocados no flex container. Os possiveis valores para esta propriedade são row, row-reverse, column ou column-reverse.
+                </dd>
+                <img src="img/flexdirectionpng">
+                <div class="code">
+                    .container {
+                        flex-direction: row;
+                    }
+                </div>
+
+                <dt>flex-wrap</dt>
+                <dd>
+                    por padrão os itens tentaram se ajustar em uma unicalinha, mas é possvel moldar isso por meio do flex wrap.
+                </dd>
+                <img src="img/Captura de tela de 2025-10-14 13-47-47.png">
+                <p>
+                    para definir quebras de linhas podmos usar:
+                </p>
+                <dt>nowrap</dt>
+                <dd>
+                    É o padrão e permit qu todos os itens fiquem em uma só fileira.
+                </dd>
+
+                <dt>wrap</dt>
+                <dd>
+                    Os itens flxiveis serão quebrados em várias linhas, e cima para baixo.
+                </dd>
+
+                <dt>wrap-reverse</dt>
+                <dd>
+                    Mesma coisa que o wrap, mas ao coltrário (de baixo para cima)
+                </dd>
+                <div class="code">
+                    .container {<br>
+                        flex-wrap:wrap-reverse <br>
+
+                    }
+                </div>
+
+                <dt>align-items</dt>
+                <dd>
+                    Qual vai ser omodo padrão de como os itens flexiveis são dispostos.
+                </dd>
+                <img src="img/Captura de tela de 2025-10-14 15-27-56.png">
+                <p>Exemplo: </p>
+                <div class="code">
+                    .container {<br>
+                        align-items: flex-start<br>
+                    }
+                </div>
+
+                <dt>justify-content</dt>
+                <dd>
+                    Mostra como vai ser o alinhamento dos itens em relação à linha principal.
+                </dd>
+                <img src="img/Captura de tela de 2025-10-14 15-30-52.png">
+                <p>
+                    Há tmbém duas propriedades adicionais que podem ser usadas "safe" e "unsafe". com o <b>safe, inpendentemente do tipo de posicionamnto, não será possivel empurrar um elemento para que ele fique fora da tela</b>
+                </p>
+                <div class="code">
+                    .container { <br>
+                        justify-contnt: flex-start;<br>
+                    }
+                </div>
+
+                <dt>align-content</dt>
+                <dd>
+                    Alinha as linhas de um flex container quando há espaço sobrando no eixo cruzado.
+                </dd>
+                <img src="img/Captura de tela de 2025-10-14 17-45-25.png">
+                <p>
+                    Essa propriedade só tem efeito m containeres flexiveis e váias linhas, one flex-flow é efinio como wrap ou wrap-reverse. um container de linha unica não refletirá o conteudo de alinhamento.
+                </p>
+                <div class="code">
+                    .container {
+                        align-content: flex-end;
+                    }
+                </div>
+            </dl>
+        </section>
+        <section>
+            <h1>Props do children</h1>
+            <dl>
+                <dt>order</dt>
+                <dd>
+                    a propriedade ordem mostra a ordem em qu os itens flexivis aparcem no flex container.
+                </dd>
+                <img src="img/Captura de tela de 2025-10-14 17-52-21.png">
+                <div class="code">
+                    .item {
+                        order: 5; (padrão é 0)
+                    }
+                </div>
+
+                <dt>flex-grow</dt>
+                <dd>
+                    define a capacidade de um item flexivel crescer, deetermina a quantidade de espaço disponivel denrtro do flex container que o item deve ocupar. Quanto maior o númro definido, mais espaço ele irá ocupar:
+
+                    <img src="img/fleexgow.png">
+
+                    Para que todos os elementos estejam com o mesmo espaço, é necessário definir o flex grow como 1, se for definido como 2, ele tentara ocupar o dobro do espaço.
+
+                    <div class="code">
+                        .item {
+                            flex-grow: 2;
+                        }
+                    </div>
+                </dd>
+
+                <dt>flex-shrink</dt>
+                <dd>
+                    Define o quanto um elemento pode encolher, se for definido como 3, terá a capacidade de encolher 3x mais que os outros elementos.
+
+                    <div class="code">
+                        .item {
+                            flex-shrink: 3;
+                        }
+                    </div>
+
+                    O padrão ppr definição é 1.
+                </dd>
+
+                <dt>flex-basis</dt>
+                <dd>
+                    O tamanho padrão do item antes que o espaço seja distribuido. Pode ser 20%, 200px, 5 rem, auto, max-content, min-content, fill e fit-content.
+
+                    <div class="code">
+                        .item {
+                            flex-basis: fill;
+                        }
+                    </div>
+                </dd>
+
+                <dt>flex</dt>
+                <dd>
+                    flex-grow, flex-shrink e flex-basis em uma só propriedade, respectivamente. As uas primeiras são opcionais. Abaixo, o flex-grow=2, flex-shrink=3 e flex-basis=10%
+
+                    <div class="code">
+                        .item {
+                            flex 2 3 10%
+                        }
+                    </div>
+                </dd>
+                <dt>align-self</dt>
+                <dd>
+                    Permite qu o alinhamento padrão (Ou o efinido por align-items) seja substuido por itens flexives individuais. Pode ser definido como <b>auto, flex-start, flex-en, center, baseline ou stretch.</b>
+
+                    <div class="code">
+                        .item {
+                            align-self: flex-start;
+                        }
+                    </div>
+                </dd>
+                
+
+            </dl>
+        </section>
+    </main>
+    
+</body>
+</html>
