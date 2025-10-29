@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    
+}
+
+h1 {
+    padding: 30px;
+    text-align: center;
+    color: rgb(0, 6, 56);
+    text-transform: uppercase;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 300px auto 80px;
+    width: 100vw;
+    height: 100vh;
+    text-shadow: 10px 0px 10px rgba(0, 0, 0, 0.466);
+    grid-gap: 10px 15px; /* Grid-row-gap: 10px, gridcolumn-gap:15px*/
+    
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 100px auto 80px;
+    width: 100vw;
+    height: 100vh;
+    text-shadow: 10px 0px 10px rgba(0, 0, 0, 0.466);
+    grid-gap: 10px 15px; /* Grid-row-gap: 10px, gridcolumn-gap:15px*/
+    grid-template-areas: "header header"
+                         "menu content" 
+                         "footer footer";
+    
+}
+
+header {
+    background-color: rgb(0, 6, 56);
+    grid-row: 1;
+    grid-column: 1/3;
+    padding: 30px;
+}
+
+nav {
+    background-color: blueviolet;
+    grid-row: 2;
+    grid-column: 1;
+    padding: 30px;
+    
+}
+
+main {
+    padding: 30px;
+    background-color: rgba(0, 14, 92, 0.425);
+    grid-row: 2;
+    grid-column: 2;
+    box-shadow: 0px 10px 40px black;
+}
+
+footer {
+    background-color: rgb(27, 0, 88);
+    grid-row: 3;
+    grid-column: 1/3;
+    padding: 15px;
+}
+
+#h2 {
+    background-color: cadetblue;
+    grid-area: header;
+}
+
+#n2 {
+    background-color: blueviolet;
+    grid-area: menu;
+}
+
+#m2 {
+    background-color: orange;
+    grid-area: content;
+}
+
+#f2 {
+    background-color: gray;
+    grid-area: footer;
+}
+
+

@@ -57,13 +57,14 @@ p {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(0, 20, 51, 0.308);
     color: rgb(0, 20, 51);
-    width: 30%;
     border-radius: 50px;
     padding: 25px;
     margin: 20px;
     text-align: left;
     padding-left: 35px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.205);
+    display: block;
+    
 
 }
 
@@ -108,4 +109,15 @@ hr {
     margin-left: auto;
     margin-right: auto;
     
+}
+
+button {
+    background-color: rgba(0, 20, 51, 0.788);
+    border-radius: 35px;
+    padding: 20px;
+    color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.322);
+    border-style: none;
+    cursor: pointer;
+
 }

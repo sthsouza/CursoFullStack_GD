@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid layout</title>
+    <link rel="stylesheet" href="note.css"
+</head>
+<body>
+    <header>
+        <h1>Css grid layout</h1>
+        <p>
+            Permite organizar elementos em uma grade bidimensional.
+        </p>
+    </header>
+    <main>
+        <section>
+            <p>
+            Assim como o flexbox, o grid é um módulo e não uma única
+propriedade. Ele envolve muitas coisas, incluindo todo o seu
+conjunto de propriedades. Algumas dessas propriedades devem
+ser definidas/aplicadas no contêiner (elemento pai, conhecido
+como grid container), enquanto as demais devem ser definidas
+nos elementos filhos (chamados de grid itens) que são os itens da
+grade.
+        </p>
+        </section>
+        <section>
+            <h2>partes do  do grid layout</h2>
+            <dl>
+                <dt>container:</dt>
+                <dd>O elemento que será a grade</dd>
+
+                <dt>linhas:</dt>
+                <dd>São localizadas na horizontal da grade</dd>
+
+                <dt>Colunas: </dt>
+                <dd>São localizadas na vertical da grade</dd>
+            </dl>
+            <img src="img/gridlayout.png"
+        </section>
+        <section>
+            <h2>Estrutura básica</h2>
+            <p>
+                existem dois tipos de propriedades para definirmos no nosso container:
+            </p>
+            <dl>
+                <dt>display-grid</dt>
+                <dd>
+                    Os grids são dispostos um abaixo do outro. <b>Mescla o comportamento block com o grid</b>
+
+                    <img src="img/displaygrid.png">
+                </dd>
+
+                <dt>Display: inline-grid</dt>
+                <dd>
+                    Os grids são dispostos um do lado do outro, mesclando comportamento inline com o grid.
+
+                    <img src="img/inlinegrid.png">
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <h2>Meu primiero grid</h2>
+           <a href="meu1grid.html">
+            <button>Clique aqui para acessar</button>
+           </a>
+        </section>
+        <section>
+            <h2>Conceitos</h2>
+            <dl>
+                <dt>grid-gap</dt>
+                <dd>
+                    Define o espaço entre as colunas e linhas do código.
+
+                    <div class="code">
+                        grid-gap: 10px 15px; /* Grid-row-gap: 10px, gridcolumn-gap:15px*/
+                    </div>
+                </dd>
+                <dt>grid-area</dt>
+                <dd>
+                    Não é necessário usar o grid row e column. Adiciona espécies de apelidos para a sessão. Primiro se adiciona os "grid-area: nome" e depois, no container, o "grid-template-areas: 'nome nome'"
+                </dd>
+                <div class="code">
+                    grid-template-areas: "header header"
+                         "menu content" 
+                         "footer footer"; 
+    
+                </div>
+
+                <dd>
+                    Ou seja:
+                    <b>header</b> na primira linha, colunas 1 e 2.<b>menu</b> na segunda linha, coluna 1. <b>content</b> na segunda linha, coluna. <b>footer</b> na linha 3, coluna 1 e 2.
+                
+                </dd>
+            </dl>
+        </section>
+    </main>
+    
+</body>
+</html>
