@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    overflow: hidden;
+}
+
+nav > a {
+    float: left;
+    display: block;
+    background-color: #00163f;
+    text-align: center;
+    padding: 20px 24px;
+    text-decoration: none;
+    color: white;
+}
+
+nav > a:hover {
+    background-color: rgb(41, 110, 150);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+
+    nav> a {
+        float: none;
+        width: 100%;
+    }
+}
