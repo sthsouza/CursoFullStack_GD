@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <link rel="stylesheet" href="note.css">
+</head>
+<body>
+    <header>
+        <h1>media queries</h1>
+        <p>
+            <b>O que são?</b> Regras qu permitem altrar o etilo de uma página dependendo do tamanho da tela. Pode ajudar na <i>responsividade</i> de <b>telas de computadores, celulares, tablets e etc</b>
+        </p>
+    </header>
+    <main>
+        <section>
+            <h2>Sintaxe básica</h2>
+            <dl>
+                <dt>Como funciona</dt>
+                <dd>
+                    <img src="img/mediaquerie7.png">
+                </dd>
+                <br>
+                
+                <dt>@media</dt>
+                <dd>
+                    palavra chave que indica o inicio de uma media query
+
+                    <div class="code">
+                        @media [media-type] ([media-feature]) {
+                            estilos a serem aplicados
+                        }
+                    </div>
+                </dd>
+
+                <dt>media type</dt>
+                <dd>
+                    define para qual tipo de midia o css que é aplicado no site será direcionado. Na maioria os casos será um screen, já que os ispositivos que verão estes sites possuem telas anexadas a eles.
+
+                    <div class="code">
+                        @media screen {
+                            estilos a serem aplicados
+                        }
+                    </div>
+                    Há outros exemplos de tipos de media como:
+                    <br>
+                    <b>all</b>: Ideal para todos os tipos de dispositivos. <b>print</b>midia que divida o conteup em páginas para impressão. <b>screen</b> Para telas. <b>speech</b>: dispositivos que mostram o conteudo de forma audivel, tipo um leitor de tela.
+                </dd>
+
+                <dt>media features</dt>
+                <dd>
+                    expressões que descrevem as caracteristicas do sipositivo, como <b>largura e altura de tela, orientação - retrato ou paisagem, resolução, densitdade dos pixels e etc.</b>
+
+                    <img src="img/mediafeatures.png">
+
+                   Exemplos de features possiveis:
+                   <br>
+                   <b>width e hight</b>: Altura e largura. <b>minwidth e max-width</b> largura minima e máxima. <b>min-height e max-height:</b> altura minima e máxima. <b>device-width e device-height</b>: Largura e altura fisica o dispositivo em pixels. <b>orientatation</b>: portrait or landscape, é a orientação do dispositivo. <b>aspect-ratio:</b> Proporção entre a largura e a altura da área de visualização. <b>resolution:</b> Define a reslução da tela em dpi - dots per inch.
+                </dd>
+
+                <dt>Operadores</dt>
+                <dd>
+                    Juntam caracteristicas à serem aplicadas.
+
+                    <div class="code">
+                        @media (min-width: 768px) and (orientation: landscape) {
+                        /* Seus estilos aqui */
+                        }   
+                    </div>
+
+                    alguns dos operadores são:
+                    <br>
+                    <b>and:</b> Combina várias condições. Por exemplo, @media (min- width: 768px) and (orientation: landscape) aplica o estilo para telas com largura mínima de 768px e orientação paisagem.
+                    <br>
+                    <b>or:</b> Permite escolher entre várias condições. Por exemplo, @media (min-width: 768px) or (max-width: 480px) aplica o
+                    estilo para telas com largura mínima de 768px ou máxima de 480px.
+                    <br>
+                    <b>not:</b> Nega uma condição. Por exemplo, @media not (orientation: landscape) aplica o estilo para dispositivos na orientação retrato.
+                    <br>
+                    <b>only:</b> Especifica que a regra se aplica apenas a um determinado tipo de mídia. É menos utilizado hoje em dia, mas pode ser útil em alguns casos específicos.
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <h2>break points</h2>
+            <dl>
+                <dt>extra small (xs)</dt>
+                <dd>
+                    Para dispositivos muuuito pequenos. max de 320px.
+                </dd>
+
+                <dt>small (sm)</dt>
+                <dd>
+                    Celulares modernos. largura máx de 576px;
+                </dd>
+
+                <dt>medium (md)</dt>
+                <dd>
+                    Tablets  em modo retrato, largura max: 768px
+                </dd>
+
+                <dt>extra large (xl)</dt>
+                <dd>
+                    desktops e monitores de grande resolução. Largura minima: 1200px.
+                </dd>
+
+                <div class="code">
+                    <br>@media (max-width: 320px) {
+                    <br>/* Extra Small (XS) - Estilo para telas com largura máxima de 320px */
+                    <br>/* Dispositivos muito pequenos, como alguns smartphones antigos */
+                    <br>}
+                    <br>
+                    <br>@media (max-width: 576px) {
+                    <br>/* Small (SM) - Estilo para telas com largura máxima de 576px */
+                    <br>/* Smartphones modernos */
+                    <br>}
+                    <br>
+                    <br>@media (max-width: 768px) {
+                    <br>/* Medium (MD) - Estilo para telas com largura máxima de 768px */
+                    <br>/* Tablets em modo retrato */
+                    }<br>
+                    <br>
+                    <br>@media (min-width: 992px) {
+                    <br>/* Large (LG) - Estilo para telas com largura mínima de 992px */
+                    <br>/* Tablets em modo paisagem e alguns laptops */
+                    <br>}
+                    <br>
+                    <br>@media (
+                    <br>: 1200px) {
+                    <br>/* Extra Large (XL) - Estilo para telas com largura mínima de 1200px */
+                    <br>/* Desktops e monitores de alta resolução */
+                    <br>}
+                </div>
+            </dl>
+        </section>
+        <section>
+            <h2>Na prática</h2>
+            <p>
+                Clique no botão abaixo e acesse o exemplo prático o que foi aqui conceituado.
+            </p>
+            <a><button>clique aqui!</button></a>
+        </section>
+
+    </main>
+    
+</body>
+</html>
