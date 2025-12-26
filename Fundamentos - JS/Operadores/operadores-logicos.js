@@ -6,8 +6,8 @@ console.log("Atividade 1 -------------")
 const idadePessoa = 19
 const podeVotar = idadePessoa >= 16 && idadePessoa < 18
 console.log (podeVotar)
-console.log
 const deveVotar = idadePessoa > 18 && idadePessoa < 70
+console.log (deve)
 
 console.log("Atividade 2 -------------")
 console.log ("Você tem acesso ao disconto?")
