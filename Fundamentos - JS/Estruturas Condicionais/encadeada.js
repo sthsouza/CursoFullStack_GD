@@ -19,11 +19,11 @@ if (valorProduto < 100) {
 
 } else if (valorProduto >= 100 && valorProduto < 500){
     let produtoDesconto = valorProduto -  (valorProduto*0.1)
-    console.log (`Você recbeu 10% de desconto, o valor final do produto é de: ${produtoDesconto}`)
+    console.log (`Você recbeu 10% de desconto, o valor final do produto é de: R$${produtoDesconto.toFixed}`)
 
 } else if (valorProduto > 500) {
     let produtoDesconto = valorProduto -  (valorProduto*0.2)
-    console.log (`Você recbeu 20% de desconto, o valor final do produto é de: ${produtoDesconto}`)
+    console.log (`Você recbeu 20% de desconto, o valor final do produto é de: R$${produtoDesconto.toFixed}`)
 
 } else {
     console.log ('Por favor, insira um valor numérico válido!')
